@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace EmployeeBook
+namespace PhoneBook
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -33,12 +33,12 @@ namespace EmployeeBook
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            DataContext = await Employee.GetEmployees();
+            DataContext = await Contact.GetContacts();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(AddEmployee));
+            this.Frame.Navigate(typeof(AddContact));
         }
     }
 }
