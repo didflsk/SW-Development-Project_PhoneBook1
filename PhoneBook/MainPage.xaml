@@ -18,9 +18,9 @@
                         <TextBlock Text = "{x:Bind LastName}" Width = "200" Margin = "2" />
                         <TextBlock Text = "{x:Bind PhoneNumber}" Width = "200" Margin = "2" />
                         <TextBlock Text = "{x:Bind Email}" Width = "200" Margin = "2" />
-                        <TextBlock Text = "{x:Bind Group}" Width = "95" Margin = "2"  
-                     x:Phase = "1"/>
-                        
+                        <TextBlock Text = "{x:Bind Group}" Width = "200" Margin = "2" x:Phase = "1"/>
+                        <TextBlock Text = "{x:Bind Work}" Width = "200" Margin = "2" />
+                       
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>

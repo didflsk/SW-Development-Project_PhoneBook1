@@ -17,11 +17,13 @@ namespace PhoneBook
 
         public string LastName { get; set; }
 
-        public string PhoneNumber { get; set; }
+        //public int PhoneNumber { get; set; }
 
         public string Email { get; set; }
   
         public string Group { get; set; }
+
+        public string Work { get; set; }
 
         public async static Task<ICollection<Contact>> GetContacts()
         {
@@ -35,8 +37,12 @@ namespace PhoneBook
                 var lineParts = line.Split(',');
                 var contact = new Contact
                 {
-                    Email = lineParts[0],
-                    Group = lineParts[1]
+                    FirstName = lineParts[0],
+                    LastName = lineParts[1],
+                    //PhoneNumber = lineParts[2],
+                    Email = lineParts[3],               
+                    Group = lineParts[4],
+                    Work = lineParts[5]
                 };
                 contacts.Add(contact);
             }
