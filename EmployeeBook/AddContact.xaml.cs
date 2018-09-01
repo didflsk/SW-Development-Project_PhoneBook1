@@ -15,26 +15,26 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace EmployeeBook
+namespace PhoneBook
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AddEmployee : Page
+    public sealed partial class AddContact : Page
     {
-        public AddEmployee()
+        public AddContact()
         {
             this.InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var employee = new Employee
+            var contact = new Contact
             {
-                Name = nameText.Text,
-                Title = titleText.Text
+                Email = emailText.Text,
+                Group = groupText.Text
             };
-            Employee.WriteEmployee(employee);
+            Contact.WriteContact(contact);
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
