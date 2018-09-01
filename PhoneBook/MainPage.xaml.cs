@@ -40,5 +40,10 @@ namespace PhoneBook
         {
             this.Frame.Navigate(typeof(AddContact));
         }
+
+        private void Contacts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
