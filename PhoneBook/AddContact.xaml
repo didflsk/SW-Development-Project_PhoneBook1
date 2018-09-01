@@ -22,15 +22,15 @@
             <ColumnDefinition Width = "Auto" MinWidth="296.8" />
             <ColumnDefinition Width = "156" />
         </Grid.ColumnDefinitions>
-        <TextBlock Name = "firstnameLabel" Margin = "200,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row = "0" Grid.RowSpan="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">First Name:</TextBlock>
+        <TextBlock Name = "firstnameLabel" Margin = "200,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row = "0" Grid.RowSpan="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">FirstName:</TextBlock>
         <TextBox Name = "firstnameText" Grid.Row = "0" Grid.Column="1" Margin = "12.2,20,-2.2,30" 
          Text = "{Binding Name, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
 
-        <TextBlock Name="lastnameLabel" Margin="200,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> Last Name:</TextBlock>
+        <TextBlock Name="lastnameLabel" Margin="200,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> LastName:</TextBlock>
         <TextBox Name = "lastnameText" Grid.Row = "1" Grid.Column="1" Margin = "12.2,20,-2.2,30" 
          Text = "{Binding Name, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
 
-        <TextBlock Name="phonenumberLabel" Margin="200,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> Last Name:</TextBlock>
+        <TextBlock Name="phonenumberLabel" Margin="200,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> PhoneNumber:</TextBlock>
         <TextBox Name = "phonenumberText" Grid.Row = "2" Grid.Column="1" Margin = "12.2,20,-2.2,30" 
          Text = "{Binding Name, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
         

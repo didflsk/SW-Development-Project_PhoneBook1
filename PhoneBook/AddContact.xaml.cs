@@ -31,7 +31,7 @@ namespace PhoneBook
         {
             var contact = new Contact
             {
-              
+                
                 Email = emailText.Text,
                 Group = groupText.Text
 
