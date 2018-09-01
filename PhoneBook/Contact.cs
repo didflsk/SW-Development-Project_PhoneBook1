@@ -12,8 +12,15 @@ namespace PhoneBook
         /// <summary>
         /// Holds the name of the contact
         /// </summary>
-        public string Email { get; set; }
+        /// 
+        public string FirstName { get; set; }
 
+        public string LastName { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public string Email { get; set; }
+  
         public string Group { get; set; }
 
         public async static Task<ICollection<Contact>> GetContacts()

@@ -31,7 +31,9 @@ namespace PhoneBook
         {
             var contact = new Contact
             {
-                
+                FirstName = firstnameText.Text,
+                LastName = lastnameText.Text,
+                PhoneNumber = phonenumberText.Text,
                 Email = emailText.Text,
                 Group = groupText.Text
 
