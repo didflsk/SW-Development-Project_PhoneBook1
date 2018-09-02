@@ -32,9 +32,9 @@
          Text = "{Binding Name, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
 
         <TextBlock Name="phonenumberLabel" Margin="150,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> PhoneNumber:</TextBlock>
-        <TextBox Name = "phonenumberNumber" Grid.Row = "2" Grid.Column="1" Margin = "12.2,20,-2.2,30" 
+        <TextBox Name = "phonenumberText" Grid.Row = "2" Grid.Column="1" Margin = "12.2,20,-2.2,30" 
          Text = "{Binding Name, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
-        
+
         <TextBlock Name = "emailLabel" Margin = "150,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row = "3" Grid.RowSpan="3">Email:</TextBlock>
         <TextBox Name = "emailText" Grid.Row = "3" Grid.Column="1" Margin = "12.2,20,-2.2,30" 
          Text = "{Binding Name, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
@@ -49,12 +49,26 @@
         <TextBox Name = "WorkText" Grid.Column = "1" Grid.Row = "5" Margin = "12.2,20,-2.2,30" 
          Text = "{Binding Group, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 
-        <StackPanel Grid.Row = "6" Grid.ColumnSpan = "2" Margin="0,1,-2,-196" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBlock Name = "AddressLabel" Margin = "150,20,-2.2,0" 
+         Grid.Row = "6" Grid.RowSpan="2">Address:</TextBlock>
+        <TextBox Name = "AddressText" Grid.Column = "1" Grid.Row = "6" Margin = "12.2,20,-2.2,30" 
+         Text = "{Binding Group, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+       
+
+
+        <StackPanel Grid.Row = "9" Grid.ColumnSpan = "2" Margin="0,1,-2,-196" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+
             <TextBlock x:Name = "Output" Margin = "200,20,0,0"/>
+
             <Button Content = "Add Contact" Click = "Button_Click"  
+
             Margin = "150,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
             <Button Content = "Back" Click = "Back_Click"  
+
             Margin = "150,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
         </StackPanel>
     </Grid>
 </Page>

@@ -8,7 +8,7 @@ namespace PhoneBook
     /// </summary>
     public class Contact
     {
-        private const string TEXT_FILE_NAME = "ContactTextFile.txt";
+        private const string TEXT_FILE_NAME = "File.txt";
         /// <summary>
         /// Holds the name of the contact
         /// </summary>
@@ -24,6 +24,10 @@ namespace PhoneBook
         public string Group { get; set; }
 
         public string Work { get; set; }
+
+        public string PhoneNumber { get; set; }
+
+        public string Address { get; set; }
 
         public async static Task<ICollection<Contact>> GetContacts()
         {
@@ -42,7 +46,8 @@ namespace PhoneBook
                     PhoneNumber = lineParts[2],
                     Email = lineParts[3],               
                     Group = lineParts[4],
-                    Work = lineParts[5]
+                    Work = lineParts[5],
+                    Address = lineParts[6]
                 };
                 contacts.Add(contact);
             }
@@ -55,7 +60,7 @@ namespace PhoneBook
         /// <param name="contact">The contact object to write</param>
         public static void WriteContact(Contact contact)
         {
-            var contactData = $"{contact.Email},{contact.Group}";
+            var contactData = $"{contact.FirstName},{contact.LastName},{contact.PhoneNumber},{contact.Email},{contact.Group},{contact.Work},{contact.Address}";
             FileHelper.WriteTextFileAsync(TEXT_FILE_NAME, contactData);
 
         }

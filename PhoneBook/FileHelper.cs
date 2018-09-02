@@ -18,14 +18,16 @@ namespace PhoneBook
         public static async void WriteTextFileAsync(string filename, 
             string content)
         {
+            
             var localFolder = ApplicationData.Current.LocalFolder;
             var textFile = await localFolder.CreateFileAsync
                 (filename, CreationCollisionOption.OpenIfExists);
 
-            var textStream = await textFile.OpenAsync(FileAccessMode.ReadWrite);
-            var textWriter = new DataWriter(textStream);
-            textWriter.WriteString(content);
-            await textWriter.StoreAsync();
+            using (var textStream = await textFile.OpenAsync(FileAccessMode.ReadWrite))
+            { var textWriter = new DataWriter(textStream);
+                textWriter.WriteString(content);
+                await textWriter.StoreAsync(); }
+            
         }
 
         public static async Task<string> ReadTextFileAsync(string filename)
