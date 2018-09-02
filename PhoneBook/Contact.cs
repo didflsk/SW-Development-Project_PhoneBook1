@@ -17,7 +17,7 @@ namespace PhoneBook
 
         public string LastName { get; set; }
 
-        //public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         public string Email { get; set; }
   
