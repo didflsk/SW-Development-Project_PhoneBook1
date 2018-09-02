@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,18 +28,41 @@ namespace PhoneBook
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
+
             var contact = new Contact
             {
+
                 FirstName = firstnameText.Text,
                 LastName = lastnameText.Text,
                 PhoneNumber = phonenumberText.Text,
                 Email = emailText.Text,
-                Group = groupText.Text
-
+                Group = groupText.Text,
+                Work = WorkText.Text,
+                Address = AddressText.Text
             };
+
+
             Contact.WriteContact(contact);
+
+            if (contact.FirstName != "")
+            {
+                var dialog = new MessageDialog("You have succesfully added your contact information");
+                await dialog.ShowAsync();
+            }
+
+            else
+            {
+                var dialog = new MessageDialog("You have to input the contact's First Name Before adding contact");
+                
+                await dialog.ShowAsync();
+            }
+         
+           
+
+            
+            
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
