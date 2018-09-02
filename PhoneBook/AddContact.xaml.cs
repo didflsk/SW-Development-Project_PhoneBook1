@@ -33,9 +33,10 @@ namespace PhoneBook
             {
                 FirstName = firstnameText.Text,
                 LastName = lastnameText.Text,
-                PhoneNumber = phonenumberText.Text,
+                PhoneNumber = phonenumberNumber.Text,
                 Email = emailText.Text,
-                Group = groupText.Text
+                Group = groupText.Text,
+                Work = WorkText.Text
 
             };
             Contact.WriteContact(contact);

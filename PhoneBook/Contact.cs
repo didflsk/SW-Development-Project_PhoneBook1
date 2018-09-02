@@ -17,7 +17,7 @@ namespace PhoneBook
 
         public string LastName { get; set; }
 
-        //public int PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
 
         public string Email { get; set; }
   
@@ -39,7 +39,7 @@ namespace PhoneBook
                 {
                     FirstName = lineParts[0],
                     LastName = lineParts[1],
-                    //PhoneNumber = lineParts[2],
+                    PhoneNumber = lineParts[2],
                     Email = lineParts[3],               
                     Group = lineParts[4],
                     Work = lineParts[5]
