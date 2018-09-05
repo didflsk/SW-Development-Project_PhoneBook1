@@ -9,17 +9,35 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <GridView Name = "Contacts" ItemsSource = "{Binding}" Height = "300" 
-         Width = "400" Margin = "50">
+        <GridView Name = "Contacts" ItemsSource = "{Binding}" 
+         Width = "400" Margin = "550,350,550,350">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType = "local:Contact">
-                    <StackPanel Orientation = "Vertical" Margin = "1">                      
-                        <TextBlock Text = "{x:Bind FirstName}" Margin = "1" Grid.Column="2" HorizontalAlignment="Stretch" />    
-                        <TextBlock Text = "{x:Bind LastName}"  Margin = "1" HorizontalAlignment="Stretch"/>
-                        <TextBlock Text = "{x:Bind PhoneNumber}" Margin = "1" HorizontalAlignment="Stretch"/>
-                        <TextBlock Text = "{x:Bind Email}" Margin = "1" HorizontalAlignment="Stretch"/>
-                        <TextBlock Text = "{x:Bind Group}" Margin = "1" HorizontalAlignment="Stretch"/>
-                        <TextBlock Text = "{x:Bind Work}" Margin = "1" HorizontalAlignment="Stretch"/>                       
+                    <StackPanel Orientation = "Vertical" VerticalAlignment="Stretch" Margin = "1">
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
+                            <TextBlock Name="firstNameLabel">First Name:</TextBlock>
+                            <TextBlock Text = "{x:Bind FirstName}" Margin = "1" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
+                            <TextBlock Name="lastNameLabel">Last Name:</TextBlock>
+                            <TextBlock Text = "{x:Bind LastName}"  Margin = "1" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
+                            <TextBlock Name="phoneNumberLabel">Phone Number:</TextBlock>
+                            <TextBlock Text = "{x:Bind PhoneNumber}" Margin = "1" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
+                            <TextBlock Name="emailLabel">Email:</TextBlock>
+                            <TextBlock Text = "{x:Bind Email}" Margin = "1" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
+                            <TextBlock Name="groupLabel">Group:</TextBlock>
+                            <TextBlock Text = "{x:Bind Group}" Margin = "1" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch"  Margin="1">
+                            <TextBlock Name="workLabel">Work:</TextBlock>
+                            <TextBlock Text = "{x:Bind Work}" Margin = "1" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
