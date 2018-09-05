@@ -25,8 +25,6 @@ namespace PhoneBook
 
         public string Work { get; set; }
 
-        public string PhoneNumber { get; set; }
-
         public string Address { get; set; }
 
         public async static Task<ICollection<Contact>> GetContacts()

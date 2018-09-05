@@ -36,10 +36,9 @@ namespace PhoneBook
 
                 FirstName = firstnameText.Text,
                 LastName = lastnameText.Text,
-                PhoneNumber = phonenumberNumber.Text,
+                PhoneNumber = phonenumberText.Text,
                 Email = emailText.Text,
                 Group = groupText.Text,
-
                 Work = WorkText.Text,
                 Address = AddressText.Text
 

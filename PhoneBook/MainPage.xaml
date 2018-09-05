@@ -13,14 +13,13 @@
          Width = "400" Margin = "50">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType = "local:Contact">
-                    <StackPanel Orientation = "Horizontal" Margin = "2">
-                        <TextBlock Text = "{x:Bind FirstName}" Width = "200" Margin = "2" />
-                        <TextBlock Text = "{x:Bind LastName}" Width = "200" Margin = "2" />
-                        <TextBlock Text = "{x:Bind PhoneNumber}" Width = "200" Margin = "2" />
-                        <TextBlock Text = "{x:Bind Email}" Width = "200" Margin = "2" />
-                        <TextBlock Text = "{x:Bind Group}" Width = "200" Margin = "2" x:Phase = "1"/>
-                        <TextBlock Text = "{x:Bind Work}" Width = "200" Margin = "2" />
-                       
+                    <StackPanel Orientation = "Vertical" Margin = "1">                      
+                        <TextBlock Text = "{x:Bind FirstName}" Margin = "1" Grid.Column="2" HorizontalAlignment="Stretch" />    
+                        <TextBlock Text = "{x:Bind LastName}"  Margin = "1" HorizontalAlignment="Stretch"/>
+                        <TextBlock Text = "{x:Bind PhoneNumber}" Margin = "1" HorizontalAlignment="Stretch"/>
+                        <TextBlock Text = "{x:Bind Email}" Margin = "1" HorizontalAlignment="Stretch"/>
+                        <TextBlock Text = "{x:Bind Group}" Margin = "1" HorizontalAlignment="Stretch"/>
+                        <TextBlock Text = "{x:Bind Work}" Margin = "1" HorizontalAlignment="Stretch"/>                       
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
