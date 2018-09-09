@@ -37,6 +37,10 @@
                             <TextBlock Name="workLabel" FontFamily="Arial" FontSize="12pt" FontWeight="Bold">Work:</TextBlock>
                             <TextBlock Text = "{x:Bind Work}"  FontFamily="Arial" FontSize="12pt" Margin = "1" HorizontalAlignment="Stretch"/>
                         </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch"  Margin="1">
+                            <TextBlock Name="addressLabel" FontFamily="Arial" FontSize="12pt" FontWeight="Bold">Address:</TextBlock>
+                            <TextBlock Text = "{x:Bind Address}"  FontFamily="Arial" FontSize="12pt" Margin = "1" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
