@@ -42,6 +42,10 @@ namespace PhoneBook
                 Group = groupText.Text,
                 Work = WorkText.Text,
                 Address = AddressText.Text
+
+       
+
+
             };
 
 
