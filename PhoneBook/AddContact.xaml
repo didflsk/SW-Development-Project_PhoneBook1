@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Margin="0,0,10,49">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
@@ -17,58 +17,66 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
             <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width = "Auto" MinWidth="296.8" />
             <ColumnDefinition Width = "156" />
         </Grid.ColumnDefinitions>
-        <TextBlock Name = "firstnameLabel" Margin = "150,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row = "0" Grid.RowSpan="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">FirstName:</TextBlock>
-        <TextBox Name = "firstnameText" Grid.Row = "0" Grid.Column="1" Margin = "12.2,20,-2.2,30" 
-         Text = "{Binding Name, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <TextBlock Name = "firstnameLabel" Margin = "150,20,-3,0" Grid.ColumnSpan="2" Grid.Row = "0" Grid.RowSpan="6">FirstName:</TextBlock>
+        <TextBox Name = "firstnameText" Grid.Row = "0" Grid.Column="1" Margin = "12,20,-2,30" 
+         Text = "{Binding Name, Mode = TwoWay}" />
 
-        <TextBlock Name="lastnameLabel" Margin="150,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> LastName:</TextBlock>
-        <TextBox Name = "lastnameText" Grid.Row = "1" Grid.Column="1" Margin = "12.2,20,-2.2,30" 
-         Text = "{Binding Name, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <TextBlock Name="lastnameLabel" Margin="150,20,-3,0" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="5"> LastName:</TextBlock>
+        <TextBox Name = "lastnameText" Grid.Row = "1" Grid.Column="1" Margin = "12,20,-2,30" 
+         Text = "{Binding Name, Mode = TwoWay}" />
 
-        <TextBlock Name="phonenumberLabel" Margin="150,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"> PhoneNumber:</TextBlock>
-        <TextBox Name = "phonenumberText" Grid.Row = "2" Grid.Column="1" Margin = "12.2,20,-2.2,30" 
-         Text = "{Binding Name, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <TextBlock Name="phonenumberLabel" Margin="150,20,-3,0" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="5"> PhoneNumber:</TextBlock>
+        <TextBox Name = "phonenumberText" Grid.Row = "2" Grid.Column="1" Margin = "12,20,-2,30" 
+         Text = "{Binding Name, Mode = TwoWay}" />
 
-        <TextBlock Name = "emailLabel" Margin = "150,20,-2.2,0" Grid.ColumnSpan="2" Grid.Row = "3" Grid.RowSpan="3">Email:</TextBlock>
-        <TextBox Name = "emailText" Grid.Row = "3" Grid.Column="1" Margin = "12.2,20,-2.2,30" 
-         Text = "{Binding Name, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <TextBlock Name = "emailLabel" Margin = "150,20,-3,0" Grid.ColumnSpan="2" Grid.Row = "3" Grid.RowSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Email:</TextBlock>
+        <TextBox Name = "emailText" Grid.Row = "3" Grid.Column="1" Margin = "12,20,-2,30" 
+         Text = "{Binding Name, Mode = TwoWay}" />
 
-        <TextBlock Name = "groupLabel" Margin = "150,20,-2.2,0" 
-         Grid.Row = "4" Grid.RowSpan="2">Group:</TextBlock>
-        <TextBox Name = "groupText" Grid.Column = "1" Grid.Row = "4" Margin = "12.2,20,-2.2,30" 
-         Text = "{Binding Group, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Name = "groupLabel" Margin = "150,20,153,0" 
+         Grid.Row = "4" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Group:</TextBlock>
+        <TextBox Name = "groupText" Grid.Column = "1" Grid.Row = "4" Margin = "12,20,-2,30" 
+         Text = "{Binding Group, Mode = TwoWay}"/>
 
-        <TextBlock Name = "WorkLabel" Margin = "150,20,-2.2,0" 
-         Grid.Row = "5" Grid.RowSpan="2">Work:</TextBlock>
-        <TextBox Name = "WorkText" Grid.Column = "1" Grid.Row = "5" Margin = "12.2,20,-2.2,30" 
-         Text = "{Binding Group, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Name = "WorkLabel" Margin = "150,20,153,0" 
+         Grid.Row = "5" Grid.RowSpan="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Work:</TextBlock>
+        <TextBox Name = "WorkText" Grid.Column = "1" Grid.Row = "5" Margin = "12,20,-2,30" 
+         Text = "{Binding Group, Mode = TwoWay}"/>
 
-        <TextBlock Name = "AddressLabel" Margin = "150,20,-2.2,0" 
-         Grid.Row = "6" Grid.RowSpan="2">Address:</TextBlock>
-        <TextBox Name = "AddressText" Grid.Column = "1" Grid.Row = "6" Margin = "12.2,20,-2.2,30" 
-         Text = "{Binding Group, Mode = TwoWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <TextBlock Name = "AddressLabel" Margin = "150,20,153,0" 
+         Grid.Row = "6" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Address:</TextBlock>
 
-       
+        <TextBox Name = "AddressText" Grid.Column = "1" Grid.Row = "6" Margin = "12,20,-2,30" 
+         Text = "{Binding Group, Mode = TwoWay}"/>
 
 
-        <StackPanel Grid.Row = "9" Grid.ColumnSpan = "2" Margin="0,1,-2,-196" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <StackPanel Grid.Row = "6" Grid.ColumnSpan = "2" Margin="0,1,-292,0" Grid.RowSpan="4" VerticalAlignment="Top" Height="364">
 
             <TextBlock x:Name = "Output" Margin = "200,20,0,0"/>
-
             <Button Content = "Add Contact" Click = "Button_Click"  
 
-            Margin = "150,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-
+                Margin = "150,20,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button x:Name="TypeSpeech" Content="SpeechToText" HorizontalAlignment="Left" Height="51" Margin="150,60,0,0" VerticalAlignment="Top" Width="142" Click="button_Click_1"/>
             <Button Content = "Back" Click = "Back_Click"  
 
-            Margin = "150,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                Margin = "150,40,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button x:Name="StopSpeechTo" Content="Stop Typing Speech" HorizontalAlignment="Center" VerticalAlignment="Top" Click="StopSpeechTo_Click"/>
+
 
         </StackPanel>
+
+
     </Grid>
 </Page>

@@ -8,7 +8,7 @@ namespace PhoneBook
     /// </summary>
     public class Contact
     {
-        private const string TEXT_FILE_NAME = "File.txt";
+        private const string TEXT_FILE_NAME = "FileTest.txt";
         /// <summary>
         /// Holds the name of the contact
         /// </summary>
