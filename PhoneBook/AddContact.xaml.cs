@@ -13,7 +13,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Windows.Media.SpeechRecognition;
+using Windows.Media.SpeechSynthesis;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace PhoneBook
@@ -72,6 +73,28 @@ namespace PhoneBook
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        SpeechSynthesizer Speechsynthesizer = new SpeechSynthesizer();
+        
+        private async void button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var speechRecognizer = new SpeechRecognizer();
+
+            // Compile the dictation grammar by default.
+            await speechRecognizer.CompileConstraintsAsync();
+
+           SpeechRecognitionResult speechRecognitionResult = await speechRecognizer.RecognizeWithUIAsync();
+
+            // Do something with the recognition result.
+            var messageDialog = new MessageDialog(speechRecognitionResult.Text, "Text spoken");
+            await messageDialog.ShowAsync();
+
+        }
+
+        private void StopSpeechTo_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

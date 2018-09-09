@@ -24,9 +24,23 @@ namespace PhoneBook
                 (filename, CreationCollisionOption.OpenIfExists);
 
             using (var textStream = await textFile.OpenAsync(FileAccessMode.ReadWrite))
-            { var textWriter = new DataWriter(textStream);
-                textWriter.WriteString(content);
-                await textWriter.StoreAsync(); }
+            {   if (textStream.Size == 0)
+                {
+                    var textWriter = new DataWriter(textStream);
+                    textWriter.WriteString(content + Environment.NewLine);
+                    await textWriter.StoreAsync();
+                }
+
+                else
+                {
+                    var outputStream = textStream.GetOutputStreamAt(textStream.Size);
+                    var textWriter = new DataWriter(outputStream);
+                    textWriter.WriteString(content + Environment.NewLine);
+                    await textWriter.StoreAsync();
+
+                }
+
+                }
             
         }
 
