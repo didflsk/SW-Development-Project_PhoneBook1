@@ -8,15 +8,14 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <GridView Name = "Contacts" ItemsSource = "{Binding}" 
-         Width = "400" Margin = "550,350,550,350">
+    <Grid Background="#FFE6EFF6">
+        <GridView Name = "Contacts" ItemsSource = "{Binding}" Margin = "233,264,233,213" >
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType = "local:Contact">
                     <StackPanel Orientation = "Vertical" VerticalAlignment="Stretch" Margin = "1">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
-                            <TextBlock Name="firstNameLabel">First Name:</TextBlock>
-                            <TextBlock Text = "{x:Bind FirstName}" Margin = "1" HorizontalAlignment="Stretch"/>
+                            <TextBlock Name="firstNameLabel">First Name: </TextBlock>
+                            <TextBlock Text = "{x:Bind FirstName}" Margin = "1" HorizontalAlignment="Stretch" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
                             <TextBlock Name="lastNameLabel">Last Name:</TextBlock>
@@ -42,6 +41,6 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <Button Content="Add Contact" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Add Contact" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click" Margin="20,150,20,150" Background="#332257B1" BorderBrush="{x:Null}" Foreground="Black" FocusVisualPrimaryBrush="{x:Null}"/>
     </Grid>
 </Page>
