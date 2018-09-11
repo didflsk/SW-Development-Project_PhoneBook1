@@ -45,5 +45,25 @@ namespace PhoneBook
         {
 
         }
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DeleteContact));
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(EditContact));
+        }
     }
 }

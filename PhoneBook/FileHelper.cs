@@ -15,16 +15,17 @@ namespace PhoneBook
         /// </summary>
         /// <param name="filename">Email of the file</param>
         /// <param name="content">Content to write to the file</param>
-        public static async void WriteTextFileAsync(string filename, 
+        public static async void WriteTextFileAsync(string filename,
             string content)
         {
-            
+
             var localFolder = ApplicationData.Current.LocalFolder;
             var textFile = await localFolder.CreateFileAsync
                 (filename, CreationCollisionOption.OpenIfExists);
 
             using (var textStream = await textFile.OpenAsync(FileAccessMode.ReadWrite))
-            {   if (textStream.Size == 0)
+            {
+                if (textStream.Size == 0)
                 {
                     var textWriter = new DataWriter(textStream);
                     textWriter.WriteString(content + Environment.NewLine);
@@ -40,8 +41,8 @@ namespace PhoneBook
 
                 }
 
-                }
-            
+            }
+
         }
 
         public static async Task<string> ReadTextFileAsync(string filename)
@@ -55,10 +56,13 @@ namespace PhoneBook
                 var textLength = textStream.Size;
                 await textReader.LoadAsync((uint)textLength);
                 return textReader.ReadString((uint)textLength);
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 return string.Empty;
             }
+
         }
+
     }
 }

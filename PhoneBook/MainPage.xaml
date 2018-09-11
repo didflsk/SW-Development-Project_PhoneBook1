@@ -45,6 +45,10 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <Button Content="Add Contact" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click" Margin="20,150,20,150" FontFamily="Arial Black" FontWeight="Bold" FontSize="20pt" Background="#332257B1" BorderBrush="{x:Null}" Foreground="Black" FocusVisualPrimaryBrush="{x:Null}"/>
+
+        <Button Content="Add Contact" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click" Height="29" Width="118"/>
+        <Button x:Name="button" Content="Delete Contact" HorizontalAlignment="Center" Margin="0,75,0,0" VerticalAlignment="Top" Click="button_Click_2" Height="38" Width="122"/>
+        <Button x:Name="button1" Content="Edit Contact" HorizontalAlignment="Left" Margin="750,166,0,0" VerticalAlignment="Top" Click="button1_Click_1"/>
+
     </Grid>
 </Page>
