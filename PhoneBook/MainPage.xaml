@@ -8,42 +8,47 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <GridView Name = "Contacts" ItemsSource = "{Binding}" 
-         Width = "400" Margin = "550,350,550,350">
+    <Grid Background="#FFE6EFF6">
+        <GridView Name = "Contacts" ItemsSource = "{Binding}" Margin = "233,264,233,213" FontFamily="Arial" >
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType = "local:Contact">
                     <StackPanel Orientation = "Vertical" VerticalAlignment="Stretch" Margin = "1">
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
-                            <TextBlock Name="firstNameLabel">First Name:</TextBlock>
-                            <TextBlock Text = "{x:Bind FirstName}" Margin = "1" HorizontalAlignment="Stretch"/>
+                            <TextBlock Name="firstNameLabel" FontFamily="Arial" FontSize="12pt" FontWeight="Bold">First Name: </TextBlock>
+                            <TextBlock Text = "{x:Bind FirstName}" FontFamily="Arial" FontSize="12pt" Margin = "1" HorizontalAlignment="Stretch" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
-                            <TextBlock Name="lastNameLabel">Last Name:</TextBlock>
-                            <TextBlock Text = "{x:Bind LastName}"  Margin = "1" HorizontalAlignment="Stretch"/>
+                            <TextBlock Name="lastNameLabel" FontFamily="Arial" FontSize="12pt" FontWeight="Bold">Last Name:</TextBlock>
+                            <TextBlock Text = "{x:Bind LastName}"  FontFamily="Arial" FontSize="12pt" Margin = "1" HorizontalAlignment="Stretch"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
-                            <TextBlock Name="phoneNumberLabel">Phone Number:</TextBlock>
-                            <TextBlock Text = "{x:Bind PhoneNumber}" Margin = "1" HorizontalAlignment="Stretch"/>
+                            <TextBlock Name="phoneNumberLabel" FontFamily="Arial" FontSize="12pt" FontWeight="Bold">Phone Number:</TextBlock>
+                            <TextBlock Text = "{x:Bind PhoneNumber}"  FontFamily="Arial" FontSize="12pt" Margin = "1" HorizontalAlignment="Stretch"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
-                            <TextBlock Name="emailLabel">Email:</TextBlock>
-                            <TextBlock Text = "{x:Bind Email}" Margin = "1" HorizontalAlignment="Stretch"/>
+                            <TextBlock Name="emailLabel" FontFamily="Arial" FontSize="12pt" FontWeight="Bold">Email:</TextBlock>
+                            <TextBlock Text = "{x:Bind Email}"   FontFamily="Arial" FontSize="12pt" Margin = "1" HorizontalAlignment="Stretch"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="1">
-                            <TextBlock Name="groupLabel">Group:</TextBlock>
-                            <TextBlock Text = "{x:Bind Group}" Margin = "1" HorizontalAlignment="Stretch"/>
+                            <TextBlock Name="groupLabel" FontFamily="Arial" FontSize="12pt" FontWeight="Bold">Group:</TextBlock>
+                            <TextBlock Text = "{x:Bind Group}"  FontFamily="Arial" FontSize="12pt" Margin = "1" HorizontalAlignment="Stretch"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch"  Margin="1">
-                            <TextBlock Name="workLabel">Work:</TextBlock>
-                            <TextBlock Text = "{x:Bind Work}" Margin = "1" HorizontalAlignment="Stretch"/>
+                            <TextBlock Name="workLabel" FontFamily="Arial" FontSize="12pt" FontWeight="Bold">Work:</TextBlock>
+                            <TextBlock Text = "{x:Bind Work}"  FontFamily="Arial" FontSize="12pt" Margin = "1" HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch"  Margin="1">
+                            <TextBlock Name="addressLabel" FontFamily="Arial" FontSize="12pt" FontWeight="Bold">Address:</TextBlock>
+                            <TextBlock Text = "{x:Bind Address}"  FontFamily="Arial" FontSize="12pt" Margin = "1" HorizontalAlignment="Stretch"/>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
+
         <Button Content="Add Contact" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click" Height="29" Width="118"/>
         <Button x:Name="button" Content="Delete Contact" HorizontalAlignment="Center" Margin="0,75,0,0" VerticalAlignment="Top" Click="button_Click_2" Height="38" Width="122"/>
         <Button x:Name="button1" Content="Edit Contact" HorizontalAlignment="Left" Margin="750,166,0,0" VerticalAlignment="Top" Click="button1_Click_1"/>
+
     </Grid>
 </Page>
